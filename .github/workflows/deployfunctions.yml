@@ -2,15 +2,17 @@ name: Deploy Covid19 to Azure Functions
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
     paths:
       - Covid19RadarAPI/**
-      - .github/workflows/*
+      - .github/workflows/**
   pull_request:
-    branches-ignore: [ master ]
+    branches-ignore:
+      - master
     paths:
       - Covid19RadarAPI/**
-      - .github/workflows/*
+      - .github/workflows/**
 
 env:
   AZURE_FUNCTIONAPP_NAME: covid19radar
